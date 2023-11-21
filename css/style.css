@@ -1,20 +1,30 @@
-*{
-   box-sizing: border-box; 
+* {
+    box-sizing: border-box;
 }
 
-body{
+:root {
+    --color-white: #fff;
+    --color-black: #6b6764;
+    --color-red: #e30224;
+    --color-gray: #85725f;
+    --color-green2: rgb(38, 204, 38);
+    --color-green: rgb(80, 173, 95);
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #eee;
+    background: var(--color-black);
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 3rem;
+    color: var(--color-white);
 }
 
-header{
+header {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -23,26 +33,35 @@ header{
     margin: auto auto;
 }
 
-input{
+input {
     height: 120px;
     font-size: 2rem;
     width: 80%;
     padding-left: 10%;
 }
 
-button.add{
+input::placeholder {
+    color: var(--color-gray)
+}
+
+button.add {
     width: 20%;
     cursor: pointer;
-    background: green;
-    color: #fff;
+    background: var(--color-green);
+    color: var(--color-white);
     font-weight: bold;
+    font-size: 35px;
     border: none;
     height: 120px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-main{
+button.add:hover {
+    background-color: var(--color-green2);
+}
+
+main {
     display: flex;
     flex-flow: row wrap;
     width: 90%;
@@ -51,57 +70,58 @@ main{
     padding-top: 40px;
 }
 
-.item{
+.item {
     display: flex;
-    flex-flow:  row wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: var(--color-white);
     height: 80px;
     width: 100%;
-    box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px var(--color-white);
     margin-bottom: 2%;
     cursor: pointer;
 }
 
-.item.clicado{
-    background: #d4f6d9;
+.item.clicado {
+    background: var(--color-white);
 }
 
-.item.clicado .item-nome{
+.item.clicado .item-nome {
     text-decoration: line-through;
-    color: gray;
+    color: var(--color-gray);
 }
 
-.item-icone{
+.item-icone {
     flex: 20%;
     /* border: 1px solid orangered; */
     text-align: center;
     font-size: 2rem;
 }
 
-.item-nome{
+.item-nome {
     flex: 55%;
     /* border: 1px solid deeppink; */
     font-size: 20px;
     font-weight: bold;
 }
 
-.item-botao{
+.item-botao {
     flex: 25%;
     /* border: 1px solid green; */
 }
 
-.delete{
-    background: red;
-    color: White;
+.delete {
+    background: var(--color-red);
+    color: var(--color-white);
     border: none;
+    font-size: 35px;
     padding: 10px;
     height: 80px;
     width: 100%;
     cursor: pointer;
 }
 
-.mdi-check-circle{
-    color: green;
+.mdi-check-circle {
+    color: var(--color-green);
 }
